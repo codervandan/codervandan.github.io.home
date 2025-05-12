@@ -1,0 +1,209 @@
+/* General Body Styles */
+body {
+    background-color: rgba(6, 20, 12, 0.95);
+    color: #a58255;
+    font-family: "Tagesschrift", system-ui;
+    margin: 0;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Main Container */
+.main-container {
+    text-align: center;
+    width: 80%;
+    max-width: 837px;
+    padding: 65px 149px;
+    border-radius: 50px;
+    background-color: rgba(15, 22, 16, 0.7);
+    border: 3px solid #a58255;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    margin-bottom: 30px;
+}
+
+.main-container h1 {
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+/* Main Navigation Styles */
+.main-nav a {
+    color: #ffffff;
+    margin: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: rgba(21, 203, 47, 0.8);
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.main-nav a:hover {
+    color: #48c9b0;
+    background-color: #ffffff;
+}
+
+/* Address Container Styles for Locations Page */
+.addresses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.addresses address {
+    flex: 1 1 45%;
+    background-color: rgba(20, 30, 25, 0.9);
+    border-radius: 20px;
+    border: 2px solid #a58255;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    text-align: center;
+}
+
+.addresses address p a {
+    color: red;
+}
+
+/* Footer Styles for Non-Index Pages */
+.footer {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 2px solid #a58255;
+}
+
+.footer a {
+    color: #48c9b0;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #ffffff;
+}
+
+
+
+.blockquote {
+    width: 80%; /* Makes sure the quote is aligned with the main-container */
+    max-width: 837px; /* Keeps it the same size as the main-container */
+    text-align: center;
+    margin: 0 auto; /* Centers the blockquote */
+    font-size: 1.5em; /* Optional: increases the font size of the quote */
+    color: #a58255; /* Optional: color for the quote text */
+    padding: 20px 10px; /* Adds padding to the quote */
+    background-color: rgba(15, 22, 16, 0.7); /* Matches the background of the main-container */
+    border: 2px solid #a58255; /* Optional: adds a border around the quote */
+    border-radius: 15px; /* Rounded corners for the blockquote */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Optional: gives the quote a soft shadow */
+}
+
+
+.age-verification-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.98);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.age-verification-container {
+    background-color: #333;
+    padding: 30px 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.age-verification-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    background-color: #4caf50;
+    cursor: pointer;
+}
+
+.age-verification-buttons button.no {
+    background-color: #d9534f;
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .main-container {
+        width: 95%;
+        padding: 40px 20px;
+        border-radius: 30px;
+    }
+
+    .main-container h1 {
+        font-size: 2em;
+    }
+
+    .main-nav a {
+        margin: 10px 5px;
+        padding: 10px;
+        font-size: 1em;
+        width: 100%;
+        display: block;
+    }
+
+    .addresses {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .addresses address {
+        flex: 1 1 100%;
+        padding: 20px;
+    }
+
+    .footer a {
+        font-size: 1.2em;
+    }
+}
+
+/* Ultra Small Devices */
+@media (max-width: 480px) {
+    .main-container {
+        padding: 30px 10px;
+    }
+
+    .main-container h1 {
+        font-size: 1.8em;
+    }
+
+    .addresses address {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+
+    .footer a {
+        font-size: 1em;
+    }
+}
